@@ -78,6 +78,7 @@ git checkout -b my-branch
 git add .
 git commit -m "Added method section (message you edited to explain on what you have worked)"
 ```
+git status allows to visualize the state of the updated files.
 
 3. Push your branch:
 ```bash
