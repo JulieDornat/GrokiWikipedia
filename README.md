@@ -83,7 +83,7 @@ git commit -m "Added method section (message you edited to explain on what you h
 ```bash
 git push origin my-branch
 ```
-origin can be GrokiWkipedia here. It correspond to the name of the remote directory.
+origin can be GrokiWikipedia here. It correspond to the name of the remote directory.
 
 4. Create a Pull Request (PR):
 
@@ -95,8 +95,7 @@ origin can be GrokiWkipedia here. It correspond to the name of the remote direct
 5. Keep your branch up to date (to do regularly)
 
 ```bash
-git checkout main
-git pull origin main
+git pull
 ```
 
 ### Using Overleaf
