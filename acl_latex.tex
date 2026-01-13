@@ -107,31 +107,54 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-This document is a supplement to the general instructions for *ACL authors. It contains instructions for using the \LaTeX{} style files for ACL conferences.
-The document itself conforms to its own specifications, and is therefore an example of what your manuscript should look like.
-These instructions should be used both for papers submitted for review and for final versions of accepted papers.
+Political neutrality in information systems is a long-standing concern, particularly for platforms that aim to provide objective and reliable knowledge. Recent debates have extended this concern from human-edited encyclopedias such as Wikipedia to large language model (LLM)–driven systems and AI-generated knowledge bases. This section reviews prior work on ideological bias in encyclopedic content, with a focus on political slant, left-leaning bias, and source framing effects. We discuss measurement approaches, empirical findings, and key limitations, highlighting open challenges for achieving a neutral point of view in both human- and AI-mediated information systems.
 \end{abstract}
 
 \section{Introduction}
 
-These instructions are for authors submitting papers to *ACL conferences using \LaTeX. They are not self-contained. All authors must follow the general instructions for *ACL proceedings,\footnote{\url{http://acl-org.github.io/ACLPUB/formatting.html}} and this document contains additional instructions for the \LaTeX{} style files.
+The Neutral Point of View (NPOV) principle requires that conflicting opinions be presented side by side, with all significant viewpoints fairly represented. This principle underlies Wikipedia’s editorial guidelines and is closely related to notions of verifiability and reliability. However, assessing whether such neutrality is achieved in practice remains challenging, particularly for politically sensitive topics.
 
-The templates include the \LaTeX{} source of this document (\texttt{acl\_latex.tex}),
-the \LaTeX{} style file used to format it (\texttt{acl.sty}),
-an ACL bibliography style (\texttt{acl\_natbib.bst}),
-an example bibliography (\texttt{custom.bib}),
-and the bibliography for the ACL Anthology (\texttt{anthology.bib}).
+A growing body of research has examined ideological bias in media content, collaborative platforms, and, more recently, large language models. These studies investigate whether information systems systematically favor particular political orientations, often described as left-leaning or right-leaning bias. This line of work spans multiple domains, including media studies, economics, computational social science, and natural language processing.
 
-\section{Engines}
+In the following, we review prior research on political bias in encyclopedic content and AI-generated knowledge systems, focusing on (i) empirical measurements of bias in Wikipedia, (ii) comparisons between human-edited and AI-generated encyclopedias, and (iii) source framing effects in LLM-based systems.
 
-To produce a PDF file, pdf\LaTeX{} is strongly recommended (over original \LaTeX{} plus dvips+ps2pdf or dvipdf).
-The style file \texttt{acl.sty} can also be used with
-lua\LaTeX{} and
-Xe\LaTeX{}, which are especially suitable for text in non-Latin scripts.
-The file \texttt{acl\_lualatex.tex} in this repository provides
-an example of how to use \texttt{acl.sty} with either
-lua\LaTeX{} or
-Xe\LaTeX{}.
+\section{Measuring Political Bias in Human-Edited Encyclopedia}
+
+Early work on ideological bias in collaborative knowledge platforms focused on Wikipedia as a large-scale, volunteer-edited encyclopedia. Greenstein and Zhu (2012) conducted one of the first systematic empirical analyses of political bias in Wikipedia articles related to U.S. politics. Using a vocabulary-based slant index derived from congressional speech, they compared linguistic patterns in Wikipedia articles to those favored by Democratic and Republican members of Congress.
+
+Their results indicate that Wikipedia exhibits a measurable political bias, with an overall tendency toward a left-leaning orientation at certain points in time. Importantly, the direction and magnitude of this bias are not static: changes over time are driven primarily by the introduction of new articles with opposing slants rather than by extensive revisions of existing content. This finding suggests that Wikipedia’s commons-based production model partially mitigates bias through content aggregation, though it does not eliminate it.
+
+However, this approach is limited to English-language U.S. political content and relies on a specific operationalization of ideological bias through lexical similarity. Moreover, it does not directly account for contributors’ individual political preferences, nor does it generalize to generative or AI-driven information systems.
+
+\section{Human vs. AI-Generated Encyclopedic Content}
+
+Recent work has extended the study of bias to AI-generated encyclopedias, questioning whether LLM-driven systems can escape the limitations of human-edited platforms. Yasseri and Mohammadi (2025) compare Wikipedia with Grokipedia, an AI-generated encyclopedia produced using the Grok LLM. Their study evaluates similarities and differences across semantic, stylistic, lexical, and political dimensions.
+
+While Grokipedia exhibits high semantic and stylistic similarity to Wikipedia, the authors report systematic differences in source usage and political bias. In particular, Grokipedia shows a rightward shift in the political orientation of cited sources, especially in topics related to politics, history, religion, and business. These findings suggest that AI-generated encyclopedic content may diverge from established editorial norms, favoring narrative expansion over citation-based verification.
+
+Despite its scale and multi-dimensional evaluation, this work focuses on highly edited Wikipedia articles and does not fully disentangle whether observed biases originate from training data, model architecture, or editorial workflow constraints. More broadly, it remains unclear whether AI-first encyclopedias can consistently satisfy NPOV requirements across domains and contexts.
+
+\section{Source Framing and Bias in Large Language Models}
+
+Beyond content generation, recent research has shown that LLMs’ judgments and evaluations themselves can be influenced by source framing. Studies on source attribution effects demonstrate that the way information is presented—such as attributing a statement to a particular individual, institution, or model—can systematically affect model agreement and interpretation.
+
+In particular, work on source framing bias in LLMs reveals that models exhibit framing effects similar to those observed in human cognition. While some models, such as Grok 2, show relatively stable agreement across attribution conditions, others demonstrate significant shifts depending on perceived authorship or ideological association. These findings raise concerns about neutrality not only in generated content but also in how models evaluate externally produced information.
+
+Such effects are especially relevant given that many LLMs are trained on Wikipedia-derived data, potentially inheriting and amplifying existing ideological asymmetries.
+
+\section{Open Challenges and Research Gaps}
+
+Despite substantial progress, several challenges remain unresolved. First, existing measurements of political bias depend heavily on specific operational definitions, making cross-study comparisons difficult. Second, most work focuses on English-language and U.S.-centric political contexts, limiting generalizability. Third, the interaction between editorial processes, training data, and model alignment strategies remains poorly understood.
+
+Finally, while prior studies document the presence of bias, fewer works address how neutrality can be systematically enforced or evaluated in hybrid systems combining human and AI contributions. These gaps motivate further research into robust, transparent, and context-aware approaches to assessing and mitigating ideological bias in encyclopedic and LLM-mediated information systems.
+
+\section{References}
+Greenstein, S., \& Zhu, F. (2012). Is Wikipedia Biased? American Economic Review, 102(3), 343–348.
+
+Yasseri, T., \& Mohammadi, S. (2025). How Similar Are Grokipedia and Wikipedia? A Multi-Dimensional Textual and Structural Comparison. arXiv preprint arXiv:2510.26899.
+
+Source framing triggers systematic bias in large language models. Science Advances.
+
 
 \section{Preamble}
 
