@@ -213,3 +213,18 @@ negative sentiment)
 Results:
 - Disparties in ideological positions between LLMs accross different geopolitical regions and across different languages.
 - The ideological stance of an LLM reflects the worldview of its creators. 
+
+## 5. Unexpected Knowledge: Auditing Wikipedia and Grokipedia Search Recommendations
+
+Study: search engine in Wikipedia and Grokipedia. In this paper, they present a systematic comparison of the recommendation behavior of Wikipedia and Grokipedia.
+
+Methology:
+- 10,000 neutral English words as queries, they collect over 70,000 search engine results and examine their semantic alignment, overlap and topical structure.
+- Analyze the semantic alignment between queries and search-engine results.
+- select 10,000 most common English words, identified through an n-gram frequency analysis of the Google Trillion Word Corpus
+- NSFW terms have been removed.
+- the package selenium5 to retrieve search engine results from Wikipedia and Grokipedia
+- Word2Vec to generate word embeddings and compute the average cosine similarity between the embedding of the query and those of its recommandations.
+Results:
+- Both platforms frequently generate results that are weakly related to the original query and, in many cases, surface unexpected content starting from innocuous queries.
+- 
