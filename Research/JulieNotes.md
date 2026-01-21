@@ -179,3 +179,37 @@ The focus is not on how LLMs generate biased outputs, but on whether, and to wha
 - Grok 2 and DeepSeek Reasoner exhibited more pronounced shifts and negative effects on agreement levels under self-attribution conditions, suggesting a stronger influence of perceived authorship on their rate of agreement with narrative statements.
 
 - Grok 2 displayed a comparable negative bias against DeepSeek Reasoner in the cluster “Politics and international relations,” meaning it evaluated narratives less favorably when it believed they had been written by DeepSeek Reasoner (even if the source was misattributed).
+
+## 4. Large language models reflect the ideology of their creators
+
+19 popular LLMs to describe 3,991 prominent persons with political relevance, and then judge how positively they portray each person.
+
+A growing body of recent research also focuses on broader 'trustworthiness', encompassing not only truthfulness but also safety, fairness, robustness, ethics and privacy.
+
+Ideology: set of beliefs about the proper order of society and how it can be achieved.
+
+Question: How the ideological positions exhibited by different LLMs differ from each other, and whether they may be reflecting the ideological viewpoints of their creators.
+
+Philosophers (Foucault and Gramsci) have argued that the notion of "ideological neutrality" is ill-posed. 
+
+Agonistic pluralism: democratic model where a plurality of ideological viewpoints compete, embracing political differences rather than suppressing them.
+
+Study: investigate the ideological diversity among popular LLMs, while withholding judgment about which LLMs are more 'neutral' and which are more 'biased'.
+
+Methodology:
+- Quantifiably eliciting the ideological position of an LLM in a natural setting is challenging.
+- Past research submit LLMs to questionnaires designed for political orientation, ask them to resolve ethical dilemmmas or poll them for their opinions on contentious issues. LLMs are highly sensitive to the precise way in which the prompt is formulated.
+- Ask LLMs to freely generate descriptions about people with political relevance (political persons) and ask them to judge how positively or negatively the person is portrayed in the description. (Open-ended approach).
+- Used the Pantheon dataset: a large annoted database of historical figures from various fields including politics, science, arts, and more, sourced from Wikipedia.
+- Selection of political persons: filter out all political persons for which no full name was available, who were born before 1850 or died before 1920, ensuring contemporary relevance of all political persons.
+- Score all selected polical persons according to their popularity on the different language editions of Wikipedia.
+- Annotated each of the political persons with tags based on the manifesto Project's coding scheme of political manifestos. This resulted in 61 unique tags that differentiate positive and negative sentiments toward specific ideological concepts (European Union
+indicating a positive sentiment toward the EU, and European Union a
+negative sentiment)
+- Stage 1: prompted an LLM to simply describe a political person.
+- Stage 2: presented the Stage 1 response to the same LLM in a new conversation, asking it to determine on a five-point Likert scale the sentiment toward the political person reflected in the description.
+
+
+Results:
+- Disparties in ideological positions between LLMs accross different geopolitical regions and across different languages.
+- The ideological stance of an LLM reflects the worldview of its creators. 
